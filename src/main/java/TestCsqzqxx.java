@@ -70,4 +70,9 @@ public class TestCsqzqxx {
         System.out.println("练习Git分支");
         return null;
     }
+
+    public static String month5test2(){
+        System.out.println("练习Git分支2");
+        return null;
+    }
 }
