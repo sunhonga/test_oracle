@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+        
+     <!-- Spring的入门配置 -->
+     <bean id ="father" class="com.springtest.ioc.xml.Father">
+         <property name="hobby" ref="hobby"></property>
+     </bean>
+    <bean id = "hobby" class="com.springtest.ioc.xml.Hobby"></bean>
+<!--    <context:component-scan base-package="com.springtest" />
+    <context:annotation-config />
+    <aop:aspectj-autoproxy/>-->
+<!--     &lt;!&ndash; Spring的属性的注入 &ndash;&gt;
+     &lt;!&ndash; 构造方法的方式 &ndash;&gt;
+     <bean id="car" class="com.sun.hong.demo4.Car">
+     	<constructor-arg name="name" value="宝马"/>
+     	<constructor-arg name="price" value="80"/>
+     </bean>
+     &lt;!&ndash; set方法的方式 &ndash;&gt;
+     <bean id="car2" class="com.sun.hong.demo4.Car2">
+     	<property name="name" value="奔驰"/>
+     	<property name="price" value="90"/>
+     </bean>
+     &lt;!&ndash; set方法注入对象属性 &ndash;&gt;
+     <bean id ="employee" class="com.sun.hong.demo4.Employee">
+     	<property name="name" value="张三"/>
+     	<property name="car2" ref="car2"/>
+     </bean>
+     &lt;!&ndash; p名称空间方式的属性注入 &ndash;&gt;
+     <bean id="teacher" class="com.sun.hong.demo4.Teacher" p:name="苍老师" p:car2-ref="car2"/>
+     &lt;!&ndash; SpEL表达式的属性注入 &ndash;&gt;
+     <bean id="spEL" class="com.sun.hong.demo4.SpEL">
+     	<property name="name" value="#{car2.name}"/>
+     	<property name="price" value="#{car.calculatorPrice()}"/>
+     </bean>
+     <import resource="applicationContext2.xml"/>
+ -->
+     
+</beans>
